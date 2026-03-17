@@ -1,0 +1,396 @@
+
+/* ============================================
+   WUFOO FORM — EDITORIAL DARK THEME
+   Designed from scratch. Clean, high-contrast,
+   refined. No purple gradients. No SaaS clichés.
+   ============================================ */
+
+/* ── DESIGN TOKENS ──────────────────────────── */
+:root {
+  --bg:           #111110;
+  --surface:      #1a1a18;
+  --border:       #2e2e2b;
+  --border-focus: #c9a84c;
+  --text-primary: #f0ece3;
+  --text-secondary:#9e9a91;
+  --text-muted:   #5a5752;
+  --accent:       #c9a84c;
+  --accent-dim:   rgba(201, 168, 76, 0.12);
+  --accent-glow:  rgba(201, 168, 76, 0.25);
+  --error:        #e05c4b;
+  --error-dim:    rgba(224, 92, 75, 0.10);
+  --success-bg:   #0f1f14;
+  --success-text: #5ec47a;
+  --success-border:#2a5c38;
+  --radius:       6px;
+  --transition:   0.18s ease;
+}
+
+/* ── RESET & CONTAINER ──────────────────────── */
+#container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+}
+
+.wufoo {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: var(--bg);
+  padding: 36px 40px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03),
+    0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+/* ── FORM HEADER ────────────────────────────── */
+.wufoo h2 {
+  font-family: 'Georgia', 'Times New Roman', serif !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 0 6px 0 !important;
+  padding: 0 !important;
+  line-height: 1.35 !important;
+}
+
+/* Thin gold rule under the title */
+.wufoo h2::after {
+  content: '' !important;
+  display: block !important;
+  width: 32px !important;
+  height: 1px !important;
+  background: var(--accent) !important;
+  margin-top: 14px !important;
+}
+
+.wufoo .info {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 14px !important;
+  color: var(--text-secondary) !important;
+  margin: 18px 0 32px 0 !important;
+  line-height: 1.65 !important;
+}
+
+/* ── PROGRESS BAR ───────────────────────────── */
+.wufoo .pgStyle {
+  margin: 0 0 36px 0 !important;
+  padding: 0 !important;
+}
+
+.wufoo .pgStyle .pgBar {
+  height: 2px !important;
+  background: var(--border) !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+}
+
+.wufoo .pgStyle .pgBar .pg {
+  background: var(--accent) !important;
+  height: 2px !important;
+  border-radius: 0 !important;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 0 8px var(--accent-glow) !important;
+}
+
+.wufoo .pgStyle .pgNum {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  text-align: right !important;
+  margin-top: 10px !important;
+  display: block !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+.wufoo .pgStyle .pgNum em {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+
+.wufoo .pgStyle .pgNum span {
+  color: var(--text-muted) !important;
+}
+
+/* ── FIELD CONTAINERS ───────────────────────── */
+.wufoo li {
+  list-style: none !important;
+  margin: 0 0 26px 0 !important;
+  padding: 0 !important;
+  clear: both !important;
+}
+
+/* ── LABELS ─────────────────────────────────── */
+.wufoo label.desc {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  margin: 0 0 10px 0 !important;
+  display: block !important;
+  line-height: 1.4 !important;
+}
+
+/* Required asterisk */
+.wufoo .req {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  margin-left: 3px !important;
+}
+
+/* ── TEXT INPUTS, TEXTAREAS, SELECTS ────────── */
+.wufoo input[type="text"],
+.wufoo input[type="email"],
+.wufoo input[type="tel"],
+.wufoo textarea,
+.wufoo select {
+  width: 100% !important;
+  padding: 13px 16px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  background: var(--surface) !important;
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    background var(--transition) !important;
+  box-sizing: border-box !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  caret-color: var(--accent) !important;
+}
+
+/* Placeholder */
+.wufoo input[type="text"]::placeholder,
+.wufoo input[type="email"]::placeholder,
+.wufoo input[type="tel"]::placeholder,
+.wufoo textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Hover */
+.wufoo input[type="text"]:hover,
+.wufoo input[type="email"]:hover,
+.wufoo input[type="tel"]:hover,
+.wufoo textarea:hover,
+.wufoo select:hover {
+  border-color: #3e3e3a !important;
+}
+
+/* Focus */
+.wufoo input[type="text"]:focus,
+.wufoo input[type="email"]:focus,
+.wufoo input[type="tel"]:focus,
+.wufoo textarea:focus,
+.wufoo select:focus {
+  outline: none !important;
+  border-color: var(--border-focus) !important;
+  background: #1f1f1d !important;
+  box-shadow: 0 0 0 3px var(--accent-dim) !important;
+}
+
+/* Select custom arrow */
+.wufoo select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235a5752' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  padding-right: 42px !important;
+  cursor: pointer !important;
+}
+
+/* Textarea */
+.wufoo textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+  line-height: 1.65 !important;
+}
+
+/* ── RADIO BUTTONS & CHECKBOXES ─────────────── */
+.wufoo .choices {
+  margin: 4px 0 0 0 !important;
+}
+
+.wufoo .choices li {
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+}
+
+.wufoo input[type="radio"],
+.wufoo input[type="checkbox"] {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 10px 0 0 !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+  accent-color: var(--accent) !important;
+}
+
+.wufoo .choices label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1.4 !important;
+  min-height: 28px !important;
+  transition: color var(--transition) !important;
+}
+
+.wufoo .choices label:hover {
+  color: var(--text-primary) !important;
+}
+
+/* ── SECTION DIVIDERS ───────────────────────── */
+.wufoo .section {
+  border-top: 1px solid var(--border) !important;
+  padding-top: 28px !important;
+  margin: 32px 0 26px 0 !important;
+}
+
+.wufoo .section h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  margin: 0 0 20px 0 !important;
+}
+
+/* ── BUTTONS ────────────────────────────────── */
+
+/* Submit / Next */
+.wufoo input[type="submit"],
+.wufoo button[type="submit"],
+.wufoo input.btTxt[type="button"] {
+  width: 100% !important;
+  padding: 14px 32px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--bg) !important;
+  background: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: var(--radius) !important;
+  cursor: pointer !important;
+  transition:
+    background var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition) !important;
+  margin-top: 10px !important;
+}
+
+.wufoo input[type="submit"]:hover,
+.wufoo button[type="submit"]:hover,
+.wufoo input.btTxt[type="button"]:hover {
+  background: #d9b85e !important;
+  box-shadow: 0 4px 16px var(--accent-glow) !important;
+  transform: translateY(-1px) !important;
+}
+
+.wufoo input[type="submit"]:active,
+.wufoo button[type="submit"]:active,
+.wufoo input.btTxt[type="button"]:active {
+  transform: translateY(0) !important;
+  box-shadow: none !important;
+}
+
+/* Previous button — ghost style */
+.wufoo input.prev[type="button"] {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.wufoo input.prev[type="button"]:hover {
+  border-color: var(--text-muted) !important;
+  color: var(--text-primary) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* ── VALIDATION & ERROR STATES ──────────────── */
+.wufoo .error {
+  color: var(--error) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 12px !important;
+  margin-top: 7px !important;
+  display: block !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.wufoo input.error,
+.wufoo textarea.error,
+.wufoo select.error {
+  border-color: var(--error) !important;
+  background: var(--error-dim) !important;
+  box-shadow: 0 0 0 3px rgba(224, 92, 75, 0.08) !important;
+}
+
+/* ── SUCCESS MESSAGE ────────────────────────── */
+.wufoo .success {
+  background: var(--success-bg) !important;
+  color: var(--success-text) !important;
+  padding: 16px 20px !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--success-border) !important;
+  margin-bottom: 20px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+}
+
+/* ── HIDE WUFOO BRANDING ────────────────────── */
+.wufoo .info.hideHeader,
+.wufoo .poweredBy {
+  display: none !important;
+}
+
+/* ── RESPONSIVE — MOBILE ────────────────────── */
+@media (max-width: 768px) {
+  .wufoo {
+    padding: 24px 20px !important;
+    border-radius: 0 !important;
+  }
+
+  .wufoo h2 {
+    font-size: 19px !important;
+  }
+
+  /* Prevents iOS auto-zoom on focus */
+  .wufoo input[type="text"],
+  .wufoo input[type="email"],
+  .wufoo input[type="tel"],
+  .wufoo textarea,
+  .wufoo select {
+    font-size: 16px !important;
+  }
+
+  .wufoo .choices label {
+    min-height: 36px !important;
+  }
+}
+
