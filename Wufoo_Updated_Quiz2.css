@@ -1,30 +1,9 @@
 
 /* ============================================
    WUFOO FORM — EDITORIAL DARK THEME
-   Designed from scratch. Clean, high-contrast,
-   refined. No purple gradients. No SaaS clichés.
+   All values hardcoded (no CSS variables)
+   for full compatibility inside Wufoo's iframe.
    ============================================ */
-
-/* ── DESIGN TOKENS ──────────────────────────── */
-:root {
-  --bg:           #111110;
-  --surface:      #1a1a18;
-  --border:       #2e2e2b;
-  --border-focus: #c9a84c;
-  --text-primary: #f0ece3;
-  --text-secondary:#9e9a91;
-  --text-muted:   #5a5752;
-  --accent:       #c9a84c;
-  --accent-dim:   rgba(201, 168, 76, 0.12);
-  --accent-glow:  rgba(201, 168, 76, 0.25);
-  --error:        #e05c4b;
-  --error-dim:    rgba(224, 92, 75, 0.10);
-  --success-bg:   #0f1f14;
-  --success-text: #5ec47a;
-  --success-border:#2a5c38;
-  --radius:       6px;
-  --transition:   0.18s ease;
-}
 
 /* ── RESET & CONTAINER ──────────────────────── */
 #container {
@@ -35,44 +14,32 @@
 }
 
 .wufoo {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  background: #111110;
   padding: 36px 40px;
   border-radius: 4px;
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,0.03),
-    0 24px 64px rgba(0, 0, 0, 0.6);
+  border: 1px solid #2e2e2b;
+  color: #f0ece3;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
 }
 
 /* ── FORM HEADER ────────────────────────────── */
 .wufoo h2 {
-  font-family: 'Georgia', 'Times New Roman', serif !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
   font-size: 22px !important;
   font-weight: 400 !important;
-  color: var(--text-primary) !important;
+  color: #f0ece3 !important;
   letter-spacing: -0.01em !important;
-  margin: 0 0 6px 0 !important;
-  padding: 0 !important;
+  margin: 0 0 18px 0 !important;
+  padding: 0 0 14px 0 !important;
   line-height: 1.35 !important;
-}
-
-/* Thin gold rule under the title */
-.wufoo h2::after {
-  content: '' !important;
-  display: block !important;
-  width: 32px !important;
-  height: 1px !important;
-  background: var(--accent) !important;
-  margin-top: 14px !important;
+  border-bottom: 1px solid #2e2e2b !important;
 }
 
 .wufoo .info {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
   font-size: 14px !important;
-  color: var(--text-secondary) !important;
-  margin: 18px 0 32px 0 !important;
+  color: #9e9a91 !important;
+  margin: 0 0 32px 0 !important;
   line-height: 1.65 !important;
 }
 
@@ -84,27 +51,24 @@
 
 .wufoo .pgStyle .pgBar {
   height: 2px !important;
-  background: var(--border) !important;
+  background: #2e2e2b !important;
   border-radius: 0 !important;
-  overflow: visible !important;
+  overflow: hidden !important;
   border: none !important;
   box-shadow: none !important;
-  position: relative !important;
 }
 
 .wufoo .pgStyle .pgBar .pg {
-  background: var(--accent) !important;
+  background: #c9a84c !important;
   height: 2px !important;
   border-radius: 0 !important;
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  box-shadow: 0 0 8px var(--accent-glow) !important;
+  transition: width 0.5s ease !important;
 }
 
 .wufoo .pgStyle .pgNum {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
   font-size: 11px !important;
   font-weight: 500 !important;
-  color: var(--text-muted) !important;
+  color: #5a5752 !important;
   text-align: right !important;
   margin-top: 10px !important;
   display: block !important;
@@ -113,13 +77,13 @@
 }
 
 .wufoo .pgStyle .pgNum em {
-  color: var(--accent) !important;
+  color: #c9a84c !important;
   font-weight: 700 !important;
   font-style: normal !important;
 }
 
 .wufoo .pgStyle .pgNum span {
-  color: var(--text-muted) !important;
+  color: #5a5752 !important;
 }
 
 /* ── FIELD CONTAINERS ───────────────────────── */
@@ -132,10 +96,9 @@
 
 /* ── LABELS ─────────────────────────────────── */
 .wufoo label.desc {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
   font-size: 11px !important;
   font-weight: 600 !important;
-  color: var(--text-secondary) !important;
+  color: #9e9a91 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
   margin: 0 0 10px 0 !important;
@@ -143,9 +106,8 @@
   line-height: 1.4 !important;
 }
 
-/* Required asterisk */
 .wufoo .req {
-  color: var(--accent) !important;
+  color: #c9a84c !important;
   font-weight: 700 !important;
   margin-left: 3px !important;
 }
@@ -158,32 +120,20 @@
 .wufoo select {
   width: 100% !important;
   padding: 13px 16px !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
   font-size: 15px !important;
   font-weight: 400 !important;
-  color: var(--text-primary) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius) !important;
-  background: var(--surface) !important;
-  transition:
-    border-color var(--transition),
-    box-shadow var(--transition),
-    background var(--transition) !important;
+  color: #f0ece3 !important;
+  border: 1px solid #2e2e2b !important;
+  border-radius: 6px !important;
+  background: #1a1a18 !important;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease !important;
   box-sizing: border-box !important;
   appearance: none !important;
   -webkit-appearance: none !important;
-  caret-color: var(--accent) !important;
+  caret-color: #c9a84c !important;
 }
 
-/* Placeholder */
-.wufoo input[type="text"]::placeholder,
-.wufoo input[type="email"]::placeholder,
-.wufoo input[type="tel"]::placeholder,
-.wufoo textarea::placeholder {
-  color: var(--text-muted) !important;
-}
-
-/* Hover */
 .wufoo input[type="text"]:hover,
 .wufoo input[type="email"]:hover,
 .wufoo input[type="tel"]:hover,
@@ -192,19 +142,18 @@
   border-color: #3e3e3a !important;
 }
 
-/* Focus */
 .wufoo input[type="text"]:focus,
 .wufoo input[type="email"]:focus,
 .wufoo input[type="tel"]:focus,
 .wufoo textarea:focus,
 .wufoo select:focus {
   outline: none !important;
-  border-color: var(--border-focus) !important;
+  border-color: #c9a84c !important;
   background: #1f1f1d !important;
-  box-shadow: 0 0 0 3px var(--accent-dim) !important;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12) !important;
 }
 
-/* Select custom arrow */
+/* Select arrow */
 .wufoo select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235a5752' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
@@ -238,38 +187,31 @@
   vertical-align: middle !important;
   cursor: pointer !important;
   flex-shrink: 0 !important;
-  accent-color: var(--accent) !important;
+  accent-color: #c9a84c !important;
 }
 
 .wufoo .choices label {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
   font-size: 14px !important;
   font-weight: 400 !important;
-  color: var(--text-secondary) !important;
+  color: #9e9a91 !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
   line-height: 1.4 !important;
   min-height: 28px !important;
-  transition: color var(--transition) !important;
-}
-
-.wufoo .choices label:hover {
-  color: var(--text-primary) !important;
 }
 
 /* ── SECTION DIVIDERS ───────────────────────── */
 .wufoo .section {
-  border-top: 1px solid var(--border) !important;
+  border-top: 1px solid #2e2e2b !important;
   padding-top: 28px !important;
   margin: 32px 0 26px 0 !important;
 }
 
 .wufoo .section h3 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
   font-size: 11px !important;
   font-weight: 600 !important;
-  color: var(--text-muted) !important;
+  color: #5a5752 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.12em !important;
   margin: 0 0 20px 0 !important;
@@ -283,20 +225,17 @@
 .wufoo input.btTxt[type="button"] {
   width: 100% !important;
   padding: 14px 32px !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
   font-size: 12px !important;
   font-weight: 600 !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  color: var(--bg) !important;
-  background: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
-  border-radius: var(--radius) !important;
+  color: #111110 !important;
+  background: #c9a84c !important;
+  border: 1px solid #c9a84c !important;
+  border-radius: 6px !important;
   cursor: pointer !important;
-  transition:
-    background var(--transition),
-    box-shadow var(--transition),
-    transform var(--transition) !important;
+  transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease !important;
   margin-top: 10px !important;
 }
 
@@ -304,7 +243,8 @@
 .wufoo button[type="submit"]:hover,
 .wufoo input.btTxt[type="button"]:hover {
   background: #d9b85e !important;
-  box-shadow: 0 4px 16px var(--accent-glow) !important;
+  border-color: #d9b85e !important;
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3) !important;
   transform: translateY(-1px) !important;
 }
 
@@ -318,46 +258,45 @@
 /* Previous button — ghost style */
 .wufoo input.prev[type="button"] {
   background: transparent !important;
-  color: var(--text-secondary) !important;
-  border: 1px solid var(--border) !important;
+  color: #9e9a91 !important;
+  border: 1px solid #2e2e2b !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 .wufoo input.prev[type="button"]:hover {
-  border-color: var(--text-muted) !important;
-  color: var(--text-primary) !important;
+  border-color: #5a5752 !important;
+  color: #f0ece3 !important;
   background: transparent !important;
   box-shadow: none !important;
   transform: none !important;
 }
 
-/* ── VALIDATION & ERROR STATES ──────────────── */
+/* ── VALIDATION & ERRORS ────────────────────── */
 .wufoo .error {
-  color: var(--error) !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+  color: #e05c4b !important;
   font-size: 12px !important;
   margin-top: 7px !important;
   display: block !important;
   font-weight: 500 !important;
-  letter-spacing: 0.01em !important;
 }
 
 .wufoo input.error,
 .wufoo textarea.error,
 .wufoo select.error {
-  border-color: var(--error) !important;
-  background: var(--error-dim) !important;
+  border-color: #e05c4b !important;
+  background: rgba(224, 92, 75, 0.08) !important;
   box-shadow: 0 0 0 3px rgba(224, 92, 75, 0.08) !important;
 }
 
 /* ── SUCCESS MESSAGE ────────────────────────── */
 .wufoo .success {
-  background: var(--success-bg) !important;
-  color: var(--success-text) !important;
+  background: #0f1f14 !important;
+  color: #5ec47a !important;
   padding: 16px 20px !important;
-  border-radius: var(--radius) !important;
-  border: 1px solid var(--success-border) !important;
+  border-radius: 6px !important;
+  border: 1px solid #2a5c38 !important;
   margin-bottom: 20px !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
   font-size: 14px !important;
   font-weight: 500 !important;
   line-height: 1.55 !important;
@@ -393,4 +332,3 @@
     min-height: 36px !important;
   }
 }
-
