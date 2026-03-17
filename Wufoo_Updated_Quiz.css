@@ -1,0 +1,351 @@
+
+* ============================================
+   WUFOO FORM - CLEAN POPUP THEME
+   ============================================ */
+
+/* Container & Base Styles */
+#container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+}
+
+.wufoo {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  color-scheme: light;
+  accent-color: #667eea;
+}
+
+/* ======================================
+   FORM HEADER
+   ====================================== */
+
+.wufoo h2 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0 0 8px 0 !important;
+  padding: 0 !important;
+  line-height: 1.3 !important;
+}
+
+.wufoo .info {
+  font-size: 15px !important;
+  color: #666 !important;
+  margin: 0 0 28px 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* ======================================
+   PROGRESS BAR & PAGE NUMBERS
+   ====================================== */
+
+.wufoo .pgStyle {
+  margin: 0 0 30px 0 !important;
+  padding: 0 !important;  /* Fixed: was a colon */
+}
+
+/* Progress bar track */
+.wufoo .pgStyle .pgBar {
+  height: 8px !important;
+  background: #e8e8e8 !important;  /* Fixed: was #e83838 (red track looked broken) */
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: none !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+} /* Fixed: missing closing brace */
+
+/* Progress bar fill */
+.wufoo .pgStyle .pgBar .pg {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important; /* Fixed: "90 deg" → "90deg" */
+  height: 100% !important;
+  border-radius: 10px !important;
+  transition: width 0.4s ease !important;
+}
+
+/* Page number pill */
+.wufoo .pgStyle .pgNum {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #667eea !important;
+  text-align: center !important;
+  margin-top: 10px !important;
+  display: block !important;
+}
+
+.wufoo .pgStyle .pgNum em {
+  color: #667eea !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  /* Removed: height: 8px on a text element has no effect */
+}
+
+.wufoo .pgStyle .pgNum span {
+  color: #999 !important;
+}
+
+/* ======================================
+   FIELD CONTAINERS & LABELS
+   ====================================== */
+
+.wufoo li {
+  list-style: none !important;
+  margin: 0 0 22px 0 !important;
+  padding: 0 !important;
+  clear: both !important;
+}
+
+.wufoo label.desc {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #2c2c2c !important;
+  margin: 0 0 7px 0 !important;
+  display: block !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Required asterisk */
+.wufoo .req {
+  color: #e74c3c !important;
+  font-weight: 700 !important;
+  margin-left: 2px !important;
+}
+
+/* ======================================
+   TEXT INPUTS, TEXTAREAS & SELECTS
+   ====================================== */
+
+.wufoo input[type="text"],
+.wufoo input[type="email"],
+.wufoo input[type="tel"],
+.wufoo textarea,
+.wufoo select {
+  width: 100% !important;
+  padding: 11px 14px !important;
+  font-size: 15px !important;
+  border: 1.5px solid #ddd !important;
+  border-radius: 8px !important;
+  background: #fafafa !important;
+  color: #1a1a1a !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
+  font-family: inherit !important;
+  box-sizing: border-box !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.wufoo input[type="text"]:hover,
+.wufoo input[type="email"]:hover,
+.wufoo input[type="tel"]:hover,
+.wufoo textarea:hover,
+.wufoo select:hover {
+  border-color: #bbb !important;
+}
+
+.wufoo input[type="text"]:focus,
+.wufoo input[type="email"]:focus,
+.wufoo input[type="tel"]:focus,
+.wufoo textarea:focus,
+.wufoo select:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12) !important;
+}
+
+/* Select arrow */
+.wufoo select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  padding-right: 40px !important;
+  cursor: pointer !important;
+}
+
+/* Textarea */
+.wufoo textarea {
+  min-height: 110px !important;
+  resize: vertical !important;
+  line-height: 1.6 !important;
+}
+
+/* ======================================
+   RADIO BUTTONS & CHECKBOXES
+   ====================================== */
+
+.wufoo .choices {
+  margin: 6px 0 0 0 !important;
+}
+
+.wufoo .choices li {
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+}
+
+.wufoo input[type="radio"],
+.wufoo input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 9px 0 0 !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+
+.wufoo .choices label {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #444 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1.4 !important;
+  min-height: 26px !important; /* Improves tap targets on mobile */
+}
+
+/* ======================================
+   SECTION DIVIDERS
+   ====================================== */
+
+.wufoo .section {
+  border-top: 2px solid #f0f0f0 !important;
+  padding-top: 24px !important;
+  margin: 28px 0 22px 0 !important;
+}
+
+.wufoo .section h3 {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #2c2c2c !important;
+  margin: 0 0 16px 0 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* ======================================
+   BUTTONS — SUBMIT, NEXT, PREV
+   ====================================== */
+
+.wufoo input[type="submit"],
+.wufoo button[type="submit"],
+.wufoo input.btTxt[type="button"] {
+  width: 100% !important;
+  padding: 13px 32px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+  margin-top: 8px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  font-family: inherit !important;
+}
+
+.wufoo input[type="submit"]:hover,
+.wufoo button[type="submit"]:hover,
+.wufoo input.btTxt[type="button"]:hover {
+  opacity: 0.92 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(102, 126, 234, 0.35) !important;
+}
+
+.wufoo input[type="submit"]:active,
+.wufoo button[type="submit"]:active,
+.wufoo input.btTxt[type="button"]:active {
+  transform: translateY(0) !important;
+  box-shadow: none !important;
+}
+
+/* Previous button (outlined style) */
+.wufoo input.prev[type="button"] {
+  background: transparent !important;
+  color: #667eea !important;
+  border: 1.5px solid #667eea !important;
+  box-shadow: none !important;
+}
+
+.wufoo input.prev[type="button"]:hover {
+  background: rgba(102, 126, 234, 0.06) !important;
+  box-shadow: none !important;
+}
+
+/* ======================================
+   VALIDATION & ERROR STATES
+   ====================================== */
+
+.wufoo .error {
+  color: #e74c3c !important;
+  font-size: 13px !important;
+  margin-top: 5px !important;
+  display: block !important;
+  font-weight: 500 !important;
+}
+
+.wufoo input.error,
+.wufoo textarea.error,
+.wufoo select.error {
+  border-color: #e74c3c !important;
+  background: #fff8f8 !important;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.08) !important;
+}
+
+/* ======================================
+   SUCCESS MESSAGE
+   ====================================== */
+
+.wufoo .success {
+  background: #f0faf4 !important;
+  color: #1a6636 !important;
+  padding: 16px 20px !important;
+  border-radius: 8px !important;
+  border: 1px solid #b7dfc5 !important;
+  margin-bottom: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+
+/* ======================================
+   HIDE WUFOO BRANDING
+   ====================================== */
+
+.wufoo .info.hideHeader,
+.wufoo .poweredBy {
+  display: none !important;
+}
+
+/* ======================================
+   RESPONSIVE — MOBILE
+   ====================================== */
+
+@media (max-width: 768px) {
+  .wufoo {
+    padding: 20px !important;
+  }
+
+  .wufoo h2 {
+    font-size: 20px !important;
+  }
+
+  .wufoo label.desc,
+  .wufoo input[type="text"],
+  .wufoo input[type="email"],
+  .wufoo input[type="tel"],
+  .wufoo textarea,
+  .wufoo select {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+
+  .wufoo .choices label {
+    min-height: 32px !important;
+  }
+}
+
+
